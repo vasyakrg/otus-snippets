@@ -1,7 +1,7 @@
 services:
 
   grafana:
-    image: grafana/grafana:5.0.0-beta4
+    image: grafana/grafana:5.0.0
     volumes:
       - grafana_data:/var/lib/grafana
     environment:
