@@ -1,0 +1,1 @@
+docker stack deploy --compose-file=<(docker-compose -f docker-compose.monitoring.yml -f docker-compose.yml config 2>/dev/null)  DEV

@@ -1,0 +1,17 @@
+services:
+  ui:
+    image: ${USER_NAME}/ui:${UI_VERSION}
+    deploy:
+      resources:
+        limits:
+          cpus: '0.50'
+          memory: 150M
+      update_config:
+        delay: 5s
+        parallelism: 1
+        failure_action: pause
+      mode: replicated
+      replicas: 3
+      placement:
+        constraints:
+          - node.role == worker

@@ -1,0 +1,14 @@
+services:
+  ui:
+    image: ${USER_NAME}/ui:${UI_VERSION}
+    deploy:
+      replicas: 3
+      update_config:
+        delay: 5s
+        parallelism: 1
+        failure_action: pause
+      mode: replicated
+      replicas: 3
+      placement:
+        constraints:
+          - node.role == worker
