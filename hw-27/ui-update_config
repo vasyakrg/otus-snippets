@@ -12,3 +12,7 @@ services:
       placement:
         constraints:
           - node.role == worker
+    ports:
+      - "${UI_PORT}:9292/tcp"
+    networks:
+      - front_net
