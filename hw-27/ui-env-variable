@@ -1,0 +1,5 @@
+services:
+  ui:
+    image: ${USER_NAME}/ui:${UI_VERSION}
+    environment:
+      - ENV=DEV
