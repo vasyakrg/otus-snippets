@@ -9,12 +9,12 @@ post:
   image:
     repository: chromko/post
     tag: latest
-    service:
-      externalPort: 5000
+  service:
+    externalPort: 5000
 
 ui:
   image:
     repository: chromko/ui
     tag: latest
-    service:
-      externalPort: 9292
+  service:
+    externalPort: 9292
