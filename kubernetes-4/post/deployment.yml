@@ -31,4 +31,4 @@ spec:
           protocol: TCP
         env:
         - name: POST_DATABASE_HOST
-          value: postdb
+          value: {{ .Values.databaseHost }}
